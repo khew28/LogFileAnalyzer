@@ -1,0 +1,187 @@
+.app-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header'
+    /*'sidebar topmenu topmenu topmenu topmenu'
+    'sidebar content content content content' */
+    'topmenu topmenu topmenu topmenu topmenu'
+    'content content content content content'
+    'footer footer footer footer footer';
+}
+
+.header { 
+  grid-area: header; 
+  background-color: #b0a7a7;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.header-logo { float:left;  }
+.header-user-icon {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+.header-user-icon-tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.header-user-icon:hover .header-user-icon-tooltip { 
+  visibility: visible;
+}
+
+.header-text { float:right; }
+
+
+.sidebar { 
+  grid-area: sidebar; 
+  width: 100%;
+  background-color: #b0a7a7;
+}
+.sidebar a {
+  display: block; 
+  text-align: left;
+  color: #474a50;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.topmenu { 
+  grid-area: topmenu;  
+  width: 100%;
+  background-color:#8f97a6;
+  overflow: auto;
+  float: left;
+  padding: 24px;
+}
+.topmenu-item{
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 15px;
+}
+.topmenu-item:hover{
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 15px;
+}
+.topmenu-item-selected { 
+  color: red;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 15px;
+}
+
+.content { 
+  grid-area: content;
+  padding: 12px;
+}
+.content-history {
+  display: block;
+  overflow: scroll;
+}
+.content-history-td {
+  text-align: center; 
+  vertical-align: middle;
+}
+
+.content-form {
+  display: table; 
+  border-spacing:5px;
+}
+.content-form-p {
+  display: table-row;
+}
+.content-form-input {
+  display: table-cell;
+}
+
+.footer { grid-area: footer; }
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+ 
+.box {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 2px solid rgb(19, 7, 7);
+  overflow: auto;
+}
+ 
+.close-icon {
+  cursor: pointer;
+  position: fixed;
+  right: calc(15% - 30px);
+  top: calc(100vh - 85vh - 33px);
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
+
+table.testlog-testcases {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  border: none;
+}
+.testlog-testcases-log-field {
+  font-weight: bold;
+  padding: 10px;
+}
+.testlog-testcases-log-val {
+  font-weight: normal;
+  text-align: left;
+}
+
+table.testcases, table.testlogs{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse; 
+  width: 100%;
+ }
+ .testcases th, .testlogs th{
+   height: 70px;
+ }
+ .testcases td, .testcases th, .testlogs th, .testlogs td {
+   border: 1px solid #0D4747;
+   padding: 8px;
+ }
+ .testcases tr:nth-child(even){background-color: #E8F8F8;}
+ .testlogs tr:nth-child(even){background-color: #E8F8F8;}
+ 
+ .testcases tr:hover, .testlogs tr:hover {background-color: #ddd;}
+ 
+ .testcases th, .testlogs th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: #83F2F1;
+   color: black;
+ }
